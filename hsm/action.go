@@ -10,9 +10,9 @@ import (
 	"sync"
 
 	"github.com/edwardsp/go-lustre"
-	"github.com/edwardsp/go-lustree/fs"
-	"github.com/edwardsp/go-lustree/llapi"
-	"github.com/edwardsp/go-lustree/status"
+	"github.com/edwardsp/go-lustre/fs"
+	"github.com/edwardsp/go-lustre/llapi"
+	"github.com/edwardsp/go-lustre/status"
 	"github.com/intel-hpdd/logging/alert"
 	"golang.org/x/sys/unix"
 )

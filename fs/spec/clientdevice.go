@@ -12,7 +12,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/edwardsp/go-lustree/lnet"
+	"github.com/edwardsp/go-lustre/lnet"
 )
 
 // ClientDevice represents a mgsspec:/fsname client mount device

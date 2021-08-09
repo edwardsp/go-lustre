@@ -8,10 +8,10 @@ import (
 	"os"
 	"sync"
 
-	"github.com/edwardsp/go-lustree/fs"
-	"github.com/edwardsp/go-lustree/llapi"
-	"github.com/edwardsp/go-lustree/pkg/pool"
-	"github.com/wastore/go-lustre"
+	"github.com/edwardsp/go-lustre"
+	"github.com/edwardsp/go-lustre/fs"
+	"github.com/edwardsp/go-lustre/llapi"
+	"github.com/edwardsp/go-lustre/pkg/pool"
 )
 
 type mountDir struct {

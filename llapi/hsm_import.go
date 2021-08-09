@@ -25,8 +25,8 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/edwardsp/go-lustree/luser"
-	"github.com/wastore/go-lustre"
+	"github.com/edwardsp/go-lustre"
+	"github.com/edwardsp/go-lustre/luser"
 	"golang.org/x/sys/unix"
 )
 

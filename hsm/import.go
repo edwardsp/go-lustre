@@ -8,7 +8,7 @@ import (
 	"os"
 
 	"github.com/edwardsp/go-lustre"
-	"github.com/edwardsp/go-lustree/llapi"
+	"github.com/edwardsp/go-lustre/llapi"
 )
 
 // Import file as a released file.
