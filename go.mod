@@ -1,4 +1,4 @@
-module github.com/wastore/go-lustre
+module github.com/edwardsp/go-lustre
 
 go 1.13
 
