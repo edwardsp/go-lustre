@@ -22,7 +22,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/wastore/go-lustre"
+	"github.com/edwardsp/go-lustre"
 )
 
 // HsmEvent is a convenience type to represent an HSM event reported
