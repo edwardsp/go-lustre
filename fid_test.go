@@ -3,13 +3,14 @@
 // license that can be found in the LICENSE file.
 
 package lustre_test
+
 //
 //import (
 //	"encoding/json"
 //
-//	"github.com/wastore/go-lustre"
-//	"github.com/wastore/go-lustre/fs"
-//	"github.com/wastore/go-lustre/status"
+//	"github.com/edwardsp/go-lustre"
+//	"github.com/edwardsp/go-lustre/fs"
+//	"github.com/edwardsp/go-lustre/status"
 //	"github.com/intel-hpdd/test/harness"
 //
 //	. "github.com/onsi/ginkgo"

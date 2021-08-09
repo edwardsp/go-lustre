@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/wastore/go-lustre/pkg/pool"
+	"github.com/edwardsp/go-lustree/pkg/pool"
 )
 
 func TestPool(t *testing.T) {

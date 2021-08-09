@@ -3,6 +3,7 @@
 // license that can be found in the LICENSE file.
 
 package layout_test
+
 //
 //import (
 //	"io/ioutil"
@@ -14,8 +15,8 @@ package layout_test
 //	. "github.com/onsi/gomega"
 //	"github.com/onsi/gomega/gexec"
 //
-//	"github.com/wastore/go-lustre/fs"
-//	"github.com/wastore/go-lustre/llapi/layout"
+//	"github.com/edwardsp/go-lustre/fs"
+//	"github.com/edwardsp/go-lustre/llapi/layout"
 //	"github.com/intel-hpdd/test/harness"
 //	"github.com/intel-hpdd/test/utils"
 //)

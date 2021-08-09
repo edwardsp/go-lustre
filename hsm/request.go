@@ -5,9 +5,9 @@
 package hsm
 
 import (
-	"github.com/wastore/go-lustre"
-	"github.com/wastore/go-lustre/fs"
-	"github.com/wastore/go-lustre/llapi"
+	"github.com/edwardsp/go-lustre"
+	"github.com/edwardsp/go-lustre/fs"
+	"github.com/edwardsp/go-lustre/llapi"
 )
 
 // RequestArchive submits a request to the coordinator for the

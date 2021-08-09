@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/wastore/go-lustre"
+	"github.com/edwardsp/go-lustre"
 )
 
 type simRecord struct {

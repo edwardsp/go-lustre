@@ -9,9 +9,9 @@ import (
 	"io"
 	"time"
 
+	"github.com/edwardsp/go-lustre"
+	"github.com/edwardsp/go-lustre/changelog"
 	"github.com/rcrowley/go-metrics"
-	"github.com/wastore/go-lustre"
-	"github.com/wastore/go-lustre/changelog"
 )
 
 type (

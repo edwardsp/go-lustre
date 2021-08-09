@@ -26,7 +26,7 @@ import (
 	"fmt"
 	"unsafe"
 
-	"github.com/wastore/go-lustre"
+	"github.com/edwardsp/go-lustre"
 )
 
 // HsmCopytoolPrivate is an opaque value representing the connection to the coordinator.

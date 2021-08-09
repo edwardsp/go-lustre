@@ -9,7 +9,7 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/wastore/go-lustre/hsm"
+	"github.com/edwardsp/go-lustre/hsm"
 )
 
 // Basic test to ensure that the test API implements all interfaces

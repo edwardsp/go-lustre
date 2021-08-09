@@ -8,8 +8,8 @@ package fs_test
 //	"os"
 //	"path"
 //
-//	"github.com/wastore/go-lustre/fs"
-//	"github.com/wastore/go-lustre/status"
+//	"github.com/edwardsp/go-lustre/fs"
+//	"github.com/edwardsp/go-lustre/status"
 //	"github.com/intel-hpdd/test/harness"
 //	"github.com/intel-hpdd/test/utils"
 //

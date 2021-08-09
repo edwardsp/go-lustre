@@ -55,8 +55,8 @@ import (
 	"os"
 	"unsafe"
 
-	"github.com/wastore/go-lustre"
-	"github.com/wastore/go-lustre/pkg/xattr"
+	"github.com/edwardsp/go-lustre"
+	"github.com/edwardsp/go-lustre/pkg/xattr"
 )
 
 type (

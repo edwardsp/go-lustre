@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/wastore/go-lustre/luser"
+	"github.com/edwardsp/go-lustre/luser"
 )
 
 var (
