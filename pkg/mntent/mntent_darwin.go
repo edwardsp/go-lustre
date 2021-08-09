@@ -5,8 +5,8 @@
 package mntent
 
 import (
+	"github.com/edwardsp/go-lustre"
 	"github.com/pkg/errors"
-	"github.com/wastore/go-lustre"
 )
 
 // GetMounted returns a slide of filesystem entries from

@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/wastore/go-lustre/llapi"
+	"github.com/edwardsp/go-lustre/llapi"
 
 	yaml "gopkg.in/yaml.v2"
 )

@@ -8,8 +8,8 @@ import (
 	"os"
 	"path"
 
-	"github.com/wastore/go-lustre"
-	"github.com/wastore/go-lustre/luser"
+	"github.com/edwardsp/go-lustre"
+	"github.com/edwardsp/go-lustre/luser"
 )
 
 // LookupFid returns the Fid for the given file or an error.

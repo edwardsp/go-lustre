@@ -9,10 +9,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/wastore/go-lustre"
-	"github.com/wastore/go-lustre/fs"
-	"github.com/wastore/go-lustre/llapi"
-	"github.com/wastore/go-lustre/status"
+	"github.com/edwardsp/go-lustre"
+	"github.com/edwardsp/go-lustre/fs"
+	"github.com/edwardsp/go-lustre/llapi"
+	"github.com/edwardsp/go-lustre/status"
 	"github.com/intel-hpdd/logging/alert"
 	"golang.org/x/sys/unix"
 )

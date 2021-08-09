@@ -11,7 +11,6 @@ package llapi
 // lustre_fid _changelog_rec_tfid(struct changelog_rec *rec) {
 //    return rec->cr_tfid;
 // }
-//
 import "C"
 
 import (
@@ -22,7 +21,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/wastore/go-lustre"
+	"github.com/edwardsp/go-lustre"
 )
 
 // HsmEvent is a convenience type to represent an HSM event reported
@@ -63,7 +62,7 @@ func ChangelogStart(device string, startRec int64, follow bool) (*Changelog, err
 	cl := Changelog{}
 	// NB: CHANGELOG_FLAG_JOBID will be mandatory in future releases.
 	// CHANGELOG_FLAG_BLOCK seems to be ignored? Can we remove it?
-	flags := C.CHANGELOG_FLAG_BLOCK | C.CHANGELOG_FLAG_JOBID
+	flags := C.CHANGELOG_FLAG_BLOCK | C.CHANGELOG_FLAG_JOBID | C.CHANGELOG_FLAG_EXTRA_FLAGS
 
 	// NB: CHANGELOG_FLAG_FOLLOW is broken and hasn't worked for a
 	// long time. This code is here in case it ever starts working
@@ -80,6 +79,9 @@ func ChangelogStart(device string, startRec int64, follow bool) (*Changelog, err
 	if rc != 0 {
 		return nil, fmt.Errorf("Got nonzero RC from llapi_changelog_start: %d", rc)
 	}
+
+	xflags := C.CHANGELOG_EXTRA_FLAG_UIDGID | C.CHANGELOG_EXTRA_FLAG_NID | C.CHANGELOG_EXTRA_FLAG_OMODE | C.CHANGELOG_EXTRA_FLAG_XATTR
+	rc = C.llapi_changelog_set_xflags(unsafe.Pointer(cl.priv), uint32(xflags))
 
 	return &cl, nil
 }

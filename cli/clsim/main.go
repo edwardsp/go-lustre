@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/wastore/go-lustre/changelog/simulator"
+	"github.com/edwardsp/go-lustre/changelog/simulator"
 )
 
 func main() {

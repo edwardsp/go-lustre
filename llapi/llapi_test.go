@@ -4,7 +4,7 @@ import (
 	"math"
 	"testing"
 
-	lustre "github.com/wastore/go-lustre"
+	lustre "github.com/edwardsp/go-lustre"
 )
 
 func TestSafeInt64(t *testing.T) {

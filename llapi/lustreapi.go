@@ -18,7 +18,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	lustre "github.com/wastore/go-lustre"
+	lustre "github.com/edwardsp/go-lustre"
 	"github.com/pkg/errors"
 )
 

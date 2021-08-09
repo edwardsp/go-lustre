@@ -19,10 +19,10 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/wastore/go-lustre/fs"
-	"github.com/wastore/go-lustre/llapi"
-	"github.com/wastore/go-lustre/luser"
-	"github.com/wastore/go-lustre/status"
+	"github.com/edwardsp/go-lustre/fs"
+	"github.com/edwardsp/go-lustre/llapi"
+	"github.com/edwardsp/go-lustre/luser"
+	"github.com/edwardsp/go-lustre/status"
 	"golang.org/x/sys/unix"
 )
 

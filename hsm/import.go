@@ -7,8 +7,8 @@ package hsm
 import (
 	"os"
 
-	"github.com/wastore/go-lustre"
-	"github.com/wastore/go-lustre/llapi"
+	"github.com/edwardsp/go-lustre"
+	"github.com/edwardsp/go-lustre/llapi"
 )
 
 // Import file as a released file.

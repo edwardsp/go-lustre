@@ -9,8 +9,8 @@ import (
 	"io"
 	"time"
 
-	"github.com/wastore/go-lustre"
-	"github.com/wastore/go-lustre/llapi"
+	"github.com/edwardsp/go-lustre"
+	"github.com/edwardsp/go-lustre/llapi"
 )
 
 type (

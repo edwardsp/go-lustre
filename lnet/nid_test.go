@@ -3,13 +3,14 @@
 //// license that can be found in the LICENSE file.
 //
 package lnet_test
+
 //
 //import (
 //	"encoding/json"
 //	"testing"
 //
 //	"github.com/intel-hpdd/ce-tools/lib/tu"
-//	"github.com/wastore/go-lustre/lnet"
+//	"github.com/edwardsp/go-lustre/lnet"
 //
 //	. "github.com/smartystreets/goconvey/convey"
 //)

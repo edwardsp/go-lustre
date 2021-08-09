@@ -8,8 +8,8 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/wastore/go-lustre"
-	"github.com/wastore/go-lustre/pkg/xattr"
+	"github.com/edwardsp/go-lustre"
+	"github.com/edwardsp/go-lustre/pkg/xattr"
 )
 
 const (

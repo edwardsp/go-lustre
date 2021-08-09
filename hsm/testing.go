@@ -11,8 +11,8 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/wastore/go-lustre"
-	"github.com/wastore/go-lustre/llapi"
+	"github.com/edwardsp/go-lustre"
+	"github.com/edwardsp/go-lustre/llapi"
 	"github.com/intel-hpdd/logging/debug"
 )
 
@@ -107,7 +107,7 @@ func NewTestRequest(archive uint, action llapi.HsmAction, fid *lustre.Fid, data 
 		action:                 action,
 		extent:                 llapi.HsmExtent{0, 0},
 		handleProgressReceived: make(chan *TestProgressUpdate),
-		data: data,
+		data:                   data,
 	}
 }
 

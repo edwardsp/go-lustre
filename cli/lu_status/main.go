@@ -14,8 +14,8 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/wastore/go-lustre/pkg/mntent"
-	"github.com/wastore/go-lustre/status"
+	"github.com/edwardsp/go-lustre/pkg/mntent"
+	"github.com/edwardsp/go-lustre/status"
 )
 
 func nidName(nid string) string {

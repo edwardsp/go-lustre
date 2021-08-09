@@ -13,8 +13,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/wastore/go-lustre/changelog"
-	"github.com/wastore/go-lustre/status"
+	"github.com/edwardsp/go-lustre/changelog"
+	"github.com/edwardsp/go-lustre/status"
 )
 
 var printTimestamp = false

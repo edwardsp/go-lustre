@@ -21,7 +21,7 @@ import (
 	"reflect"
 	"unsafe"
 
-	"github.com/wastore/go-lustre"
+	"github.com/edwardsp/go-lustre"
 )
 
 // MaxBatchSize is a limit imposed by liblustreapi, somewhere.
