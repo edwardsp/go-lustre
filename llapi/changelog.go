@@ -328,7 +328,7 @@ func hasJobID(r *ChangelogRecord) bool {
 func newRecord(cRec *C.struct_changelog_rec) (*ChangelogRecord, error) {
 	tfid := C._changelog_rec_tfid(cRec)
 	record := &ChangelogRecord{
-		name:      C.GoString(C.changelog_rec_name(cRec)),
+		name:      C.GoStringN(C.changelog_rec_name(cRec), int(cRec.cr_namelen)),
 		index:     int64(cRec.cr_index),
 		rType:     uint(cRec.cr_type),
 		typeName:  C.GoString(C.changelog_type2str(C.int(cRec.cr_type))),
