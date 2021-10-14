@@ -343,7 +343,7 @@ func newRecord(cRec *C.struct_changelog_rec) (*ChangelogRecord, error) {
 	if record.IsRename() {
 		snamelen := int(C.changelog_rec_snamelen(cRec))
 		rename := C.changelog_rec_rename(cRec)
-		record.sourceName = C.GoString(C.changelog_rec_sname(cRec), C.int(snamelen))
+		record.sourceName = C.GoStringN(C.changelog_rec_sname(cRec), C.int(snamelen))
 		record.sourceFid = fromCFid(&rename.cr_sfid)
 		record.sourceParentFid = fromCFid(&rename.cr_spfid)
 		fmt.Println("snamelen = %d, namelen = %d, sname = %s, name = %s", snamelen, namelen, record.sourceName, record.name)
