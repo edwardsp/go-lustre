@@ -353,11 +353,15 @@ func newRecord(cRec *C.struct_changelog_rec) (*ChangelogRecord, error) {
 		record.sourceName = sname
 		record.sourceFid = fromCFid(&rename.cr_sfid)
 		record.sourceParentFid = fromCFid(&rename.cr_spfid)
+		fmt.Printf("%s: namelen=%d, actualNameLength=%d, snamelen=%d, actualSnameLength=%d\n", record.typeName, namelen, len(name), snamelen, len(sname))
+		fmt.Printf("newRecord name='%s' sname='%s'\n", name, sname)
+	} else {
+		fmt.Printf("%s: namelen=%d, actualNameLength=%d\n", record.typeName, namelen, len(name))
+		fmt.Printf("newRecord name='%s'\n", name)
 	}
 	if hasJobID(record) {
 		jobid := C.changelog_rec_jobid(cRec)
 		record.jobID = C.GoString(&jobid.cr_jobid[0])
 	}
-
 	return record, nil
 }
