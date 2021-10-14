@@ -328,8 +328,12 @@ func hasJobID(r *ChangelogRecord) bool {
 func newRecord(cRec *C.struct_changelog_rec) (*ChangelogRecord, error) {
 	tfid := C._changelog_rec_tfid(cRec)
 	namelen := int(cRec.cr_namelen)
+	name := ""
+	if namelen > 0 {
+		C.GoString(C.changelog_rec_name(cRec))
+	}
 	record := &ChangelogRecord{
-		name:      C.GoString(C.changelog_rec_name(cRec)),
+		name:      name,
 		index:     int64(cRec.cr_index),
 		rType:     uint(cRec.cr_type),
 		typeName:  C.GoString(C.changelog_type2str(C.int(cRec.cr_type))),
@@ -339,18 +343,16 @@ func newRecord(cRec *C.struct_changelog_rec) (*ChangelogRecord, error) {
 		targetFid: fromCFid(&tfid),
 		parentFid: fromCFid(&cRec.cr_pfid),
 	}
-	fmt.Printf("namelen = %d, name = %s\n", namelen, record.name)
 	if record.IsRename() {
 		snamelen := int(C.changelog_rec_snamelen(cRec))
-		fmt.Printf("snamelen = %d\n", snamelen)
-		if snamelen < 0 {
-			snamelen = 0
+		sname := ""
+		if snamelen > 0 {
+			sname = C.GoStringN(C.changelog_rec_sname(cRec), C.int(snamelen))
 		}
 		rename := C.changelog_rec_rename(cRec)
-		record.sourceName = C.GoStringN(C.changelog_rec_sname(cRec), C.int(snamelen))
+		record.sourceName = sname
 		record.sourceFid = fromCFid(&rename.cr_sfid)
 		record.sourceParentFid = fromCFid(&rename.cr_spfid)
-		fmt.Printf("snamelen = %d, sname = %s\n", snamelen, record.sourceName)
 	}
 	if hasJobID(record) {
 		jobid := C.changelog_rec_jobid(cRec)
