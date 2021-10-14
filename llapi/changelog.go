@@ -330,7 +330,7 @@ func newRecord(cRec *C.struct_changelog_rec) (*ChangelogRecord, error) {
 	namelen := int(cRec.cr_namelen)
 	name := ""
 	if namelen > 0 {
-		C.GoString(C.changelog_rec_name(cRec))
+		name = C.GoString(C.changelog_rec_name(cRec))
 	}
 	record := &ChangelogRecord{
 		name:      name,
