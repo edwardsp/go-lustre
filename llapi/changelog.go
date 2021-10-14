@@ -329,7 +329,7 @@ func newRecord(cRec *C.struct_changelog_rec) (*ChangelogRecord, error) {
 	tfid := C._changelog_rec_tfid(cRec)
 	namelen := int(cRec.cr_namelen)
 	record := &ChangelogRecord{
-		name:      C.GoStringN(C.changelog_rec_name(cRec), C.int(namelen)),
+		name:      C.GoString(C.changelog_rec_name(cRec)),
 		index:     int64(cRec.cr_index),
 		rType:     uint(cRec.cr_type),
 		typeName:  C.GoString(C.changelog_type2str(C.int(cRec.cr_type))),
