@@ -331,6 +331,10 @@ func newRecord(cRec *C.struct_changelog_rec) (*ChangelogRecord, error) {
 	name := ""
 	if namelen > 0 {
 		name = C.GoString(C.changelog_rec_name(cRec))
+		if namelen < len(name) {
+			fmt.Printf("shrinking name as it is longer than namelen: '%s' -> '%s'\n", name, name[:namelen])
+			name = name[:namelen]
+		}
 	}
 	record := &ChangelogRecord{
 		name:      name,
