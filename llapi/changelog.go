@@ -110,6 +110,10 @@ func ChangelogRecv(cl *Changelog) (*ChangelogRecord, error) {
 	}
 
 	r, err := newRecord(rec)
+
+	// free memory from Changelog record
+	C.free(unsafe.Pointer(rec))
+	
 	if err != nil {
 		return nil, err
 	}
